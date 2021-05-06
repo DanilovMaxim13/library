@@ -14,8 +14,9 @@ function createCatalog() {
   xhr.open("GET", "books.json");
   xhr.onload = function() {
     JSONdata = JSON.parse(xhr.responseText);  
-    for (let key of favorites)
+    for (let key of favorites){
       createCart(key);
+    } 
     favoriteOnlick();
     ratingOnClick();
   }  
@@ -41,7 +42,7 @@ function ratingOnClick() {
       let articul = item.getAttribute("articul");
       if (ratingStorage[articul] < 10) ratingStorage[articul]++;
       localStorage.setItem("rating", JSON.stringify(ratingStorage));
-      document.querySelector(".rating__rating[articul=\""+ articul + "\"]").textContent = ratingStorage[articul];
+      document.querySelector(".rating__score[articul=\""+ articul + "\"]").textContent = ratingStorage[articul];
     };
   });
 
@@ -51,13 +52,13 @@ function ratingOnClick() {
       let articul = item.getAttribute("articul");
       if (ratingStorage[articul] > 1) ratingStorage[articul]--;
       localStorage.setItem("rating", JSON.stringify(ratingStorage));
-      document.querySelector(".rating__rating[articul=\""+ articul + "\"]").textContent = ratingStorage[articul];
+      document.querySelector(".rating__score[articul=\""+ articul + "\"]").textContent = ratingStorage[articul];
     };
   });
 }
 
 function favoriteOnlick() {
-  let favoritesButton = document.getElementsByClassName("card__favorites");
+  let favoritesButton = document.getElementsByClassName("card__favorites-button");
   [].forEach.call( favoritesButton, function(item) {
     item.onclick = function() {
       setFavorites(item.getAttribute("articul"));
@@ -68,11 +69,11 @@ function favoriteOnlick() {
     let index = favorites.indexOf(articul);
     if (index !== -1) {
       favorites.splice(index, 1);
-      document.querySelector( ".card__favorites[articul=\""+ articul + "\"]" ).style.color = 'black';
+      document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]" ).style.color = 'black';
       document.querySelector( ".card[articul=\""+ articul + "\"]" ).style.display = "none";
     } else {
       favorites.unshift(articul);
-      document.querySelector( ".card__favorites[articul=\""+ articul + "\"]"  ).style.color = 'blue';
+      document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]"  ).style.color = 'gold';
     };
     localStorage.setItem("favorites", JSON.stringify(favorites));
   };
@@ -84,7 +85,8 @@ function createCart(key) {
   card.className = "card";
 
   let photoWrapper = document.createElement("div");
-  photoWrapper.className = "photo-wrapper";
+  photoWrapper.className = "image-book-wrapper";
+
   let photo = document.createElement("img");
   photo.className = "card__image-book";
   photo.src = JSONdata[key]["image"];
@@ -102,18 +104,19 @@ function createCart(key) {
   additInform.className = "additional-information";
   
   if(ratingStorage[key] === undefined) {ratingStorage[key] = 5;}
+  
   let rating = document.createElement("article");
   rating.className = "rating";
-  rating.innerHTML += "<button class=\"rating__minus\" articul=\"" + key + "\">-</button>" 
-  rating.innerHTML += "<p class=\"rating__rating\" articul=\"" + key + "\">" +  ratingStorage[key] + "</p>"
-  rating.innerHTML += "<button class=\"rating__plus\" articul=\"" + key + "\">+</button>"
+  rating.innerHTML += "<button class=\"rating__minus rating__button\" articul=\"" + key + "\">-</button>" 
+  rating.innerHTML += "<p class=\"rating__score rating__button\" articul=\"" + key + "\">" +  ratingStorage[key] + "</p>"
+  rating.innerHTML += "<button class=\"rating__plus rating__button\" articul=\"" + key + "\">+</button>"
   additInform.append(rating);
 
   let checkFavorites = document.createElement("button");
-  checkFavorites.className = "card__favorites";
+  checkFavorites.className = "card__favorites-button";
   checkFavorites.setAttribute("articul", key);
   if (favorites.indexOf(key) !== -1) {
-    checkFavorites.style.color = 'blue';
+    checkFavorites.style.color = 'gold';
   }
   checkFavorites.textContent = "ИЗБРАННОЕ";
   additInform.append(checkFavorites);
