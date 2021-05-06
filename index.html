@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Library</title>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header__logo">LIBRARY</a>
+    <a href="favorit.html" class="header__favorit">Избранное</a>
+  </header>
+
+  <article class="search-wrapper">
+    <input type="text" id="search" class="search__input" placeholder="Поиск" autocomplete="off">
+  </article>
+
+  <input type="checkbox" id="check-modification" checked>
+
+  <article class="modification">
+    <div class="filter">
+      <p class="filter-text">Фильтры:</p>
+      <select id="filter-publisher" class="modification__input">
+        <option selected>Издательство</option>
+      </select>
+      <select id="filter-author" class="modification__input">
+        <option selected>Автор</option>
+      </select>
+      <select id="filter-year" class="modification__input">
+        <option selected>Год</option>
+      </select>
+    </div>
+    <div class="sorting">
+      <p class="sorting-text">Сортировка:</p>
+      <select id="sort-method" class="modification__input">
+        <option selected>По умолчанию</option>
+        <option>По алфавиту</option>
+        <option>По рейтингу</option>
+        <option>По дате издания</option>
+      </select>
+      <select id="sort-direction" class="modification__input">
+        <option selected>По умолчанию</option>
+        <option>По возрастанию</option>
+        <option>По убыванию</option>
+      </select>
+    </div>
+    <input type="button" value="Получить" id="get-modification" class="modification__button">
+  </article>
+
+  <label for="check-modification" class="check-modification">
+    <img src="image/arrow-logo.svg" 
+      alt="Стрелка для открытия дополнительной секции" class="check-logo">
+  </label>
+
+  <main id="content" class="content">
+    <article class="card">
+      <div class="image-book-wrapper">
+        <img src="https://img-gorod.ru/28/453/2845340_detail.jpg" alt="Книга NAME" class="card__image-book">
+      </div>
+      <div class="name-information">
+        <h2 class="card__book-name">Бегущий по лезвию</h2>
+        <p class="card__book-author">Филип К. Дик</p>
+      </div>
+      <div class="additional-information">
+        <article class="card__rating rating">
+          <button class="rating__minus rating__button">-</button>
+          <p class="rating__score">5</p>
+          <button class="rating__plus rating__button">+</button>
+        </article>
+        <button class="card__favorites-button">ИЗБРАННОЕ</button>
+      </div>
+    </article>
+  </main>
+
+  <!-- <a href="favorit.html">Избранное</a>
+  <input type="text" id="search">
+  <select id="filter-publisher">
+    <option selected>Издательство</option>
+  </select>
+  <select id="filter-author">
+    <option selected>Автор</option>
+  </select>
+  <select id="filter-year">
+    <option selected>Год</option>
+  </select>
+  <select id="sort-method">
+    <option selected>По умолчанию</option>
+    <option>По алфавиту</option>
+    <option>По рейтингу</option>
+    <option>По дате издания</option>
+  </select>
+  <select id="sort-direction">
+    <option selected>По умолчанию</option>
+    <option>По возрастанию</option>
+    <option>По убыванию</option>
+  </select>
+  <input type="button" value="Получить" id="get-modification">
+  <div id="content">
+    <article class="card">
+      <div class="photo-wrapper">
+        <img src="https://img-gorod.ru/28/453/2845340_detail.jpg" alt="Книга NAME" class="card__image-book">
+      </div>
+      <div class="name-information">
+        <h2 class="card__book-name">Бегущий по лезвию</h2>
+        <p class="card__book-author">Филип К. Дик</p>
+      </div>
+      <div class="additional-information">
+        <article class="card__rating rating">
+          <button class="rating__minus">-</button>
+          <p class="rating__rating">5</p>
+          <button class="rating__plus">+</button>
+        </article>
+        <input type="checkbox" class="card__favorites">
+      </div>
+    </article>
+  </div> -->
+  
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

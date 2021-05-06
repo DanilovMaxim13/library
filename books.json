@@ -1,0 +1,37 @@
+{
+  "1" : {
+    "name" : "Игра на бирже",
+    "publisher" : "Ленанд",
+    "author" : "Дараган В.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/28/453/2845340_detail.jpg"
+  },
+  "2" : {
+    "name" : "Пиши, сокращай. Как создавать сильный текст",
+    "publisher" : "Альпина Паблишер",
+    "author" : "Сарычева Л.",
+    "year of publishing" : "2018",
+    "image" : "https://img-gorod.ru/25/579/2557931_detail.jpg"
+  },
+  "3" : {
+    "name" : "Самый богатый человек в Вавилоне",
+    "publisher" : "Попурри, ООО",
+    "author" : "Клейсон Дж.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/21/115/2111534_detail.jpg"
+  },
+  "4" : {
+    "name" : "Ubuntu Linux с нуля",
+    "publisher" : "БХВ-Петербург",
+    "author" : "Волох С.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/28/465/2846548_detail.jpg"
+  },
+  "5" : {
+    "name" : "Введение в язык Си++",
+    "publisher" : "МАКС Пресс",
+    "author" : "Столяров А.",
+    "year of publishing" : "2020",
+    "image" : "https://img-gorod.ru/28/439/2843959_detail.jpg"
+  }
+}
