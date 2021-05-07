@@ -153,20 +153,20 @@ body {
 .content {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
+  justify-content: center;
 }
 
 /* card */
 .card {
   flex-grow: 1;
   flex-basis: 250px;
-  margin: 20px;
+  max-width: 400px;
+  margin: 30px;
   height: 450px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .image-book-wrapper {
@@ -221,6 +221,7 @@ body {
 .rating__score {
   font-size: 2em;
   margin: 0;
+  color: var(--main-bg-color);
 }
 
 .card__favorites-button {
@@ -232,6 +233,7 @@ body {
 
 .hide-in-search,
 .hide-in-filter {
+  transition: 1s;
   display: none;
 }
 

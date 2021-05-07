@@ -209,7 +209,7 @@ function favoriteOnlick() {
       document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]" ).style.color = 'black';
     } else {
       favorites.unshift(articul);
-      document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]"  ).style.color = 'gold';
+      document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]"  ).style.color = 'var(--main-bg-color)';
     };
     localStorage.setItem("favorites", JSON.stringify(favorites));
   };
@@ -252,7 +252,7 @@ function createCart(key) {
   checkFavorites.className = "card__favorites-button";
   checkFavorites.setAttribute("articul", key);
   if (favorites.indexOf(key) !== -1) {
-    checkFavorites.style.color = 'gold';
+    checkFavorites.style.color = 'var(--main-bg-color)';
   }
   checkFavorites.textContent = "ИЗБРАННОЕ";
   additInform.append(checkFavorites);
