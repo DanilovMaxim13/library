@@ -1,6 +1,5 @@
 :root {
   --main-bg-color: #F5BB71;
-  --main-text-color: black;
 }
 
 @font-face {
@@ -14,7 +13,7 @@
 
 body {
   margin: 0 15%;
-  font-family: OrelegaOne;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -43,6 +42,7 @@ body {
 .header__favorit {
   margin: 1% 8%;
   font-size: 1.3em;
+  font-family: OrelegaOne;
 
   text-decoration: none;
   color: #FFF;
@@ -63,7 +63,7 @@ body {
   font-size: 2em;
   padding: 1% 3%;
 
-  color: var(--main-text-color);
+  color: black;
   border-radius: 20px;
   border: 6px double var(--main-bg-color);
   outline: none;
@@ -90,6 +90,7 @@ body {
 
 .filter-text,
 .sorting-text {
+  font-family: OrelegaOne;
   margin: 0;
   font-size: 2.5em;
 }
@@ -169,6 +170,10 @@ body {
   justify-content: space-between;
 }
 
+.card:hover .card__image-book{
+  transform: scale(1.2);
+}
+
 .image-book-wrapper {
   width: 100%;
   height: 60%;
@@ -182,6 +187,8 @@ body {
   height: 100%;
   width: auto;
   margin: auto;
+
+  transition: 1s;
 }
 
 .name-information {
@@ -222,19 +229,36 @@ body {
   font-size: 2em;
   margin: 0;
   color: var(--main-bg-color);
+  text-shadow:0px 2px 0 rgb(0,0,0);
 }
 
 .card__favorites-button {
   border: none;
   background-color: #FFF;
   font-size: 1em;
-  font-weight: 800;
+  font-weight: 700;
+  text-shadow: 0px 1px 0 rgb(0,0,0);
 }
 
 .hide-in-search,
 .hide-in-filter {
   transition: 1s;
   display: none;
+}
+
+/* eror */
+.eror {
+  display: none;
+  margin: 20vh auto;
+  text-align: center;
+  font-size: 4em;
+  color: black;
+  text-shadow: 0px 1px 0 var(--main-bg-color);
+  font-family: OrelegaOne;
+}
+
+.eror a {
+  color: var(--main-bg-color);
 }
 
 @media screen and (max-width: 1000px) {

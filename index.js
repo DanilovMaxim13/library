@@ -95,8 +95,8 @@ function filterOnclick() {
   }
 
   let intersection = suitablePublisherBook
-    .filter(x => suitableAutorBook.includes(x))
-    .filter(x => suitableYearBook.includes(x));
+    .filter(x => suitableYearBook.includes(x))
+    .filter(x => suitableAutorBook.includes(x));
 
   for (let key in JSONdata) {
     let card = document.querySelector(".card[articul=\""+ key + "\"]");
@@ -138,10 +138,13 @@ function sortOnclick() {
         setOrderCatalog(sortedCatalog);
         break;
       case "По дате издания":
-        alert( 'Перебор' );
+        if (directionValue === "По возрастанию"){
+          sortedCatalog.sort((a, b) => a.rating < b.rating ? 1 : -1);           
+        } else {
+          sortedCatalog.sort((a, b) => a.rating > b.rating ? 1 : -1);
+        }
+        setOrderCatalog(sortedCatalog);
         break;
-      default:
-        alert( "Нет таких значений" );
     }
   } else {
     for(let item of sortedCatalog) {
@@ -222,6 +225,7 @@ function createCart(key) {
 
   let photoWrapper = document.createElement("div");
   photoWrapper.className = "image-book-wrapper";
+  photoWrapper.setAttribute("articul", key);
 
   let photo = document.createElement("img");
   photo.className = "card__image-book";

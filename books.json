@@ -33,5 +33,54 @@
     "author" : "Столяров А.",
     "year of publishing" : "2020",
     "image" : "https://img-gorod.ru/28/439/2843959_detail.jpg"
+  },
+  "6" : {
+    "name" : "Разумный инвестор",
+    "publisher" : "Альпина Паблишер",
+    "author" : "Грэм Б.",
+    "year of publishing" : "2018",
+    "image" : "https://img-gorod.ru/24/354/2435456_detail.jpg"
+  },
+  "7" : {
+    "name" : "Дева в саду",
+    "publisher" : "Иностранка",
+    "author" : "Байетт А.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/28/449/2844912_detail.jpg"
+  },
+  "8" : {
+    "name" : "Три женщины",
+    "publisher" : "Бомбора",
+    "author" : "Таддео Л.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/28/445/2844531_detail.jpg"
+  },
+  "9" : {
+    "name" : "Аспид",
+    "publisher" : "АСТ",
+    "author" : "Старк К.",
+    "year of publishing" : "2021",
+    "image" : "https://img-gorod.ru/28/240/2824050_detail.jpg"
+  },
+  "10" : {
+    "name" : "Royal Love. Принц Николас",
+    "publisher" : "Эксмо",
+    "author" : "Чейз Э.",
+    "year of publishing" : "2020",
+    "image" : "https://img-gorod.ru/28/268/2826803_detail.jpg"
+  },
+  "11" : {
+    "name" : "Обитель",
+    "publisher" : "АСТ",
+    "author" : "Прилепин З.",
+    "year of publishing" : "2020",
+    "image" : "https://img-gorod.ru/28/408/2840850_detail.jpg"
+  },
+  "12" : {
+    "name" : "Дом голосов",
+    "publisher" : "Азбука",
+    "author" : "Карризи Д.",
+    "year of publishing" : "2019",
+    "image" : "https://img-gorod.ru/28/363/2836349_detail.jpg"
   }
 }

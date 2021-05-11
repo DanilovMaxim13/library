@@ -14,9 +14,13 @@ function createCatalog() {
   xhr.open("GET", "books.json");
   xhr.onload = function() {
     JSONdata = JSON.parse(xhr.responseText);  
-    for (let key of favorites){
+    if (favorites.length === 0) {
+      document.querySelector( ".eror" ).style.display = "block";
+    } else {
+      for (let key of favorites)
       createCart(key);
-    } 
+    }
+     
     favoriteOnlick();
     ratingOnClick();
   }  
@@ -69,6 +73,9 @@ function favoriteOnlick() {
     let index = favorites.indexOf(articul);
     if (index !== -1) {
       favorites.splice(index, 1);
+      if (favorites.length === 0) {
+        document.querySelector( ".eror" ).style.display = "block";
+      }
       document.querySelector( ".card__favorites-button[articul=\""+ articul + "\"]" ).style.color = 'black';
       document.querySelector( ".card[articul=\""+ articul + "\"]" ).style.display = "none";
     } else {
